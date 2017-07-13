@@ -1,0 +1,10 @@
+<h1>Welcome to Nick's Blog</h1>
+
+<%= link_to "New post", new_posts_path %>
+
+<!-- Displaying all posts -->
+<% @posts.each do |p| %> 
+	<%= p.title %>
+	<%= p.description %>
+<% end %>
+<!-- End of loop -->

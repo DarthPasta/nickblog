@@ -1,0 +1,11 @@
+<h1>New Post Page</h1>
+
+<!-- Form for adding a new post  -->
+<%= form_for @post do |f| %> 
+<%= f.label :Title %>
+<%= f.text_field :title %>
+<%= f.label :Description %> 
+<%= f.text_area :description %> 
+<%= f.submit "Add Post" %> 
+<% end %> 
+<!-- End of form -->
