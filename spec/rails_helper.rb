@@ -14,7 +14,7 @@ ENV['RAILS_ENV'] ||= 'test'
   RSpec.configure do |config|
     config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
-    config.use_transactional_fixtures = false
+    config.use_transactional_fixtures = true
     
     config.before(:suite) do
       DatabaseCleaner.strategy = :truncation

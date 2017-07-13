@@ -1,10 +1,12 @@
 <h1>Welcome to Nick's Blog</h1>
 
-<%= link_to "New post", new_posts_path %>
-
+<%= link_to "New post", new_post_path %>
+<br>
 <!-- Displaying all posts -->
 <% @posts.each do |p| %> 
 	<%= p.title %>
 	<%= p.description %>
+	<%= link_to "Edit Post", edit_post_path(p.id) %>
+	<br>
 <% end %>
 <!-- End of loop -->

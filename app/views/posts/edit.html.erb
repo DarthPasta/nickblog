@@ -1,0 +1,11 @@
+<h1>Edit Post Page</h1>
+
+<!-- Form for Editing a new post  -->
+<%= form_for @post do |f| %> 
+<%= f.label :Title %>
+<%= f.text_field :title %>
+<%= f.label :Description %> 
+<%= f.text_area :description %> 
+<%= f.submit "Update Post" %> 
+<% end %> 
+<!-- End of form -->

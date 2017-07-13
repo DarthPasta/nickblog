@@ -14,7 +14,22 @@ class PostsController < ApplicationController
 			redirect_to root_path
 		else
 			flash[:danger] = "Failed to create post"
-			render 'new'
+			redirect_to new_post_path
+		end
+	end
+
+	def edit 
+		@post = Post.find(params[:id])
+	end
+
+	def update 
+		@post = Post.find(params[:id])
+		if @post.update_attributes(post_params)
+			flash[:success] = "Successfully updated post"
+			redirect_to root_path
+		else
+			flash[:danger] = "Failed to update the post"
+			redirect_to edit_post_path(@post.id)
 		end
 	end
 
